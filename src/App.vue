@@ -2,7 +2,7 @@
     <div class="wrapper">
         <app-header></app-header>
         <div class="container">
-            <h1>Hello Vue. Create by: {{ author }}</h1>
+            <router-view></router-view>
         </div>
         <app-footer></app-footer>
     </div>

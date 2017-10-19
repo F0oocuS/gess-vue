@@ -8,21 +8,21 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Main <span class="sr-only">(current)</span></a>
-                    </li>
+                    <router-link tag="li" to="/home" class="nav-item">
+                        <a class="nav-link">Main <span class="sr-only">(current)</span></a>
+                    </router-link>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Activities</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacts</a>
-                    </li>
+                    <router-link tag="li" to="/about" class="nav-item">
+                        <a class="nav-link">About us</a>
+                    </router-link>
+                    <router-link tag="li" to="/news" class="nav-item">
+                        <a class="nav-link">News</a>
+                    </router-link>
+                    <router-link tag="li" to="/contacts" class="nav-item">
+                        <a class="nav-link">Contacts</a>
+                    </router-link>
                 </ul>
                 <div class="dop-info">
                     <ul class="phone-list">

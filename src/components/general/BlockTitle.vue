@@ -1,28 +1,29 @@
 <template>
     <div class="block-title">
-        <h3 class="title">Test block title {{ blockTitle }}</h3>
+        <h3 class="title">{{ blockTitle }}</h3>
         <div class="separate">
-            <div class="green"></div>
+            <div class="grey"></div>
             <div class="lemon"></div>
-            <div class="white"></div>
+            <div class="green"></div>
+
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['blockTitle'],
-        data() {
-            return {
-                blockTitle: blockTitle
-            }
-        }
+        props: ['blockTitle']
     }
 </script>
 
 <style lang="scss">
+    .block-title {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        width: 100%;
+    }
     .title {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         font-family: 'Roboto Slab', Serif;
         text-align: center;
         text-transform: uppercase;
@@ -32,19 +33,27 @@
     }
     .separate {
         .green {
-            margin: auto;
+            margin: -3px auto 0;
             height: 4px;
-            width: 120px;
+            width: 60px;
+            background-color: #18760e;
         }
         .lemon {
             margin: auto;
             height: 2px;
-            width: 200px;
+            width: 150px;
+            background-color: #bcc900;
         }
         .white, .grey {
-            margin: auto;
+            margin: -2px auto;
             height: 1px;
             width: 300px;
+        }
+        .white {
+            background-color: #fff;
+        }
+        .grey {
+            background-color: #f6f6f6;
         }
     }
 </style>
