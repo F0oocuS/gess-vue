@@ -1,6 +1,6 @@
 <template>
     <div class="block-title">
-        <h3 class="title">{{ blockTitle }}</h3>
+        <h1 class="title">{{ blockTitle }}</h1>
         <div class="separate">
             <div class="white" v-if="colorLine"></div>
             <div class="grey" v-else></div>
@@ -16,10 +16,10 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .block-title {
-        margin-top: 50px;
-        margin-bottom: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
         width: 100%;
     }
     .title {

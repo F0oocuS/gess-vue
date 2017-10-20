@@ -10,7 +10,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .list {
         list-style: none;
         padding-left: 20px;
