@@ -1,14 +1,14 @@
 <template>
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">Gess</a>
+            <router-link to="/" class="navbar-brand"><img src="../../assets/logoBig.png" alt=""></router-link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto ml-auto">
-                    <router-link tag="li" to="/home" class="nav-item">
+                    <router-link tag="li" to="/" class="nav-item" exact>
                         <a class="nav-link">Main <span class="sr-only">(current)</span></a>
                     </router-link>
                     <li class="nav-item">
@@ -62,6 +62,12 @@
         }
     }
 
+    .navbar-brand {
+        img {
+            max-height: 40px;
+        }
+    }
+
     .navbar-toggler {
         margin-top: 7px;
         margin-bottom: 7px;
@@ -77,8 +83,9 @@
         .nav-item {
             text-transform: uppercase;
             font-size: 14px;
+            border-top: 3px solid transparent;
             &.active {
-                border-top: 3px solid #017101;
+                border-top-color: #017101;
                 .nav-link {
                     color: #017101;
                 }

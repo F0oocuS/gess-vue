@@ -4,7 +4,7 @@ import Contacts from './components/custome/contacts/Contacts.vue';
 import News from './components/custome/news/News.vue';
 
 export const routes = [
-    { path: '/home', component: Home },
+    { path: '/', component: Home },
     { path: '/about', component: About },
     { path: '/contacts', component: Contacts },
     { path: '/news', component: News }

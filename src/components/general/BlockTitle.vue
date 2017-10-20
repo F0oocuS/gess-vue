@@ -2,24 +2,24 @@
     <div class="block-title">
         <h3 class="title">{{ blockTitle }}</h3>
         <div class="separate">
-            <div class="grey"></div>
+            <div class="white" v-if="colorLine"></div>
+            <div class="grey" v-else></div>
             <div class="lemon"></div>
             <div class="green"></div>
-
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['blockTitle']
+        props: ['blockTitle', 'colorLine']
     }
 </script>
 
 <style lang="scss">
     .block-title {
         margin-top: 50px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         width: 100%;
     }
     .title {

@@ -60,15 +60,15 @@
         height: 100%;
         color: #fff;
         text-align: center;
-        &:not(:last-child) {
-            border-right: 1px solid black;
-        }
         &__item {
             margin: 0;
             color: inherit;
             &:hover, &:focus, &:active {
                 color: inherit;
             }
+        }
+        @media(max-width: 991px) and (min-width: 768px) {
+            font-size: 12px;
         }
     }
     .create-by {
