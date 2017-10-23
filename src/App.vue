@@ -31,6 +31,9 @@
         max-width: 100%;
         object-fit: cover;
     }
+    .text-center {
+        text-align: center;
+    }
     .wrapper {
         display: flex;
         flex-direction: column;
