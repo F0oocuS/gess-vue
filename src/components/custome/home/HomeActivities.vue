@@ -1,5 +1,5 @@
 <template>
-    <section class="activities">
+    <section class="activities" id="activities">
         <div class="container">
             <div class="row">
                 <app-block-title :blockTitle="blockTitle" :colorLine="colorLine"></app-block-title>
@@ -8,7 +8,7 @@
                         <h4 class="activities-item__title">{{ item.name }}</h4>
                         <div class="activities-item__separate"></div>
                         <app-unordered-list :list="item.list"></app-unordered-list>
-                        <a href="" class="activities-item__more">More</a>
+                        <router-link :to="{ path: item.link }" class="activities-item__more">More</router-link>
                     </div>
                 </div>
             </div>
@@ -29,22 +29,26 @@
                     {
                         name: 'Capstone Microturbines',
                         list: ['Reliable co-generation equipment'],
-                        side: true
+                        side: true,
+                        link: '/turbines'
                     },
                     {
                         name: 'Solar Power Plants',
                         list: ['Complex solutions', 'Equipment and components'],
-                        side: true
+                        side: true,
+                        link: '/solar'
                     },
                     {
                         name: 'Biomass Projects',
                         list: ['Fast Pyrolysis Technology', 'Biogas equipment'],
-                        side: false
+                        side: false,
+                        link: '/biomass'
                     },
                     {
                         name: 'Financing options',
                         list: ['Consulting services', 'Individual investment programs'],
-                        side: false
+                        side: false,
+                        link: '/financing'
                     },
                 ]
             }
@@ -140,6 +144,9 @@
                     transform: rotate(45deg);
                     transition: .4s;
                 }
+            }
+            .list {
+                color: #fff;
             }
             @media(max-width: 991px) {
                 padding: 20px;

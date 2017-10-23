@@ -10,10 +10,10 @@
                 <ul class="navbar-nav mr-auto ml-auto">
                     <router-link tag="li" to="/" class="nav-item" exact>
                         <a class="nav-link">Main <span class="sr-only">(current)</span></a>
-                    </router-link>
+                    </router-link><!--
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Activities</a>
-                    </li>
+                        <a class="nav-link" href="#activities">Activities</a>
+                    </li>-->
                     <router-link tag="li" to="/about" class="nav-item">
                         <a class="nav-link">About us</a>
                     </router-link>

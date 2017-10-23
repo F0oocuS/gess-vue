@@ -17,8 +17,8 @@
     }
     .list__item {
         position: relative;
-        color: #fff;
         font-size: 14px;
+        line-height: 30px;
         &:before {
             content: '';
             position: absolute;

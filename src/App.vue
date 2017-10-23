@@ -27,6 +27,10 @@
     * {
         font-family: 'Roboto', sans-serif;
     }
+    img {
+        max-width: 100%;
+        object-fit: cover;
+    }
     .wrapper {
         display: flex;
         flex-direction: column;

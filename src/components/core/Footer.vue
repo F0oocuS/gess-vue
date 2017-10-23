@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="create-by">
-            Developed by <a href="https://github.com/F0oocuS">Ihor Yaremko</a>
+            Developed by <a href="https://github.com/F0oocuS" target="_blank">Ihor Yaremko</a>
         </div>
     </footer>
 </template>

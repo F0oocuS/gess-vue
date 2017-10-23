@@ -35,19 +35,19 @@
         .green {
             margin: -3px auto 0;
             height: 4px;
-            width: 60px;
+            max-width: 60px;
             background-color: #18760e;
         }
         .lemon {
             margin: auto;
             height: 2px;
-            width: 150px;
+            max-width: 150px;
             background-color: #bcc900;
         }
         .white, .grey {
             margin: -2px auto;
             height: 1px;
-            width: 300px;
+            max-width: 300px;
         }
         .white {
             background-color: #fff;
