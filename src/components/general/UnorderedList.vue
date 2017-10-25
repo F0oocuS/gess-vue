@@ -18,6 +18,7 @@
     .list__item {
         position: relative;
         font-size: 14px;
+        font-weight: 100;
         line-height: 30px;
         &:before {
             content: '';

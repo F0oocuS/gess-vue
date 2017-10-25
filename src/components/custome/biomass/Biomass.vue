@@ -1,6 +1,6 @@
 <template>
     <main>
-        <app-banner></app-banner>
+        <app-banner :banner="banner"></app-banner>
         <app-equipment :equipment="equipment"></app-equipment>
         <app-pyrolysis :pyrolysis="pyrolysis"></app-pyrolysis>
         <app-pyrolysis-plan :pyrolysisPlan="pyrolysisPlan"></app-pyrolysis-plan>
@@ -16,6 +16,9 @@
     export default {
         data() {
             return {
+                banner: {
+                    title: 'Biomass project'
+                },
                 equipment: {
                     title: 'Reliable equipment - long life time',
                     colorLine: 'colorLine',

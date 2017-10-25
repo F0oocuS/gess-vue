@@ -2,7 +2,7 @@
     <section class="pyrolysis-plan">
         <app-block-title :blockTitle="pyrolysisPlan.title" :colorLine="pyrolysisPlan.colorLine"></app-block-title>
         <div class="container">
-            <img src="http://via.placeholder.com/900x600" alt="">
+            <img src="http://via.placeholder.com/900x600" alt="Plan image">
             <ul class="pyrolysis-plan-list">
                 <li class="list-item" v-for="(item, index) in pyrolysisPlan.list"><span>{{ index + 1 }}</span>{{ item }}</li>
             </ul>

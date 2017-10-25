@@ -10,7 +10,8 @@ const router = new VueRouter({
     mode: 'history',
     linkActiveClass: 'active',
     linkExactActiveClass: '',
-    routes
+    routes,
+    scrollBehavior: () => ({ y: 0 })
 });
 
 new Vue({

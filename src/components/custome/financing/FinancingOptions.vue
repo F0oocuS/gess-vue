@@ -1,16 +1,18 @@
 <template>
-    <section class="equipment">
-        <app-block-title :blockTitle="equipment.title" :colorLine="equipment.colorLine"></app-block-title>
+    <section class="options">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
-                    <p class="equipment__text">Main components for biogas facility stable functioning:</p>
-                    <div class="equipment__list">
-                        <app-unordered-list :list="equipment.list"></app-unordered-list>
-                    </div>
-                </div>
                 <div class="col-md-4">
-                    <img src="http://via.placeholder.com/900x600" alt="">
+                    <img src="http://via.placeholder.com/600x600" alt="">
+                </div>
+                <div class="col-md-8">
+                    <div class="options-info">
+                        <app-block-title :blockTitle="options.title" :colorLine="options.colorLine"></app-block-title>
+
+                        <p class="options-info__text">{{ options.text }}</p>
+
+                        <app-unordered-list :list="options.list"></app-unordered-list>
+                    </div>
                 </div>
             </div>
         </div>
@@ -22,7 +24,7 @@
     import UnorderedList from '../../general/UnorderedList.vue';
 
     export default {
-        props: ['equipment'],
+        props: ['options'],
         components: {
             appBlockTitle: BlockTitle,
             appUnorderedList: UnorderedList
@@ -31,11 +33,12 @@
 </script>
 
 <style lang="scss">
-    .equipment {
+    .options {
         background-color: #f6f6f6;
-        &__text {
+        &-info__text {
             font-size: 16px;
             font-weight: 100;
+            line-height: 24px;
         }
     }
 </style>

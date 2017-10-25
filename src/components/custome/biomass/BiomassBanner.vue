@@ -1,11 +1,17 @@
 <template>
     <section class="banner">
-        <h1 class="banner__title">Biomass project</h1>
+        <h1 class="banner__title">{{ banner.title }}</h1>
         <p class="banner__desc"><span>Realization the potential of Ukraine</span> on the basis of bio-energy projects - the main priority of <br>
             GESS activities within this area.
         </p>
     </section>
 </template>
+
+<script>
+    export default {
+        props: ['banner']
+    }
+</script>
 
 <style lang="scss">
     .banner {
