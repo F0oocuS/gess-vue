@@ -142,7 +142,6 @@
                     border-right: 1px solid #bcc900;
                     border-top: 1px solid #bcc900;
                     transform: rotate(45deg);
-                    transition: .4s;
                 }
             }
             .list {
