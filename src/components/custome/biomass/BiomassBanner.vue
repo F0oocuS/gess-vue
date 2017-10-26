@@ -13,7 +13,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .banner {
         display: flex;
         flex-direction: column;

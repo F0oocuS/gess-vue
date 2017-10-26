@@ -17,7 +17,7 @@
                                 <li class="turbines__char-item"><span>Total efficiency including heat utilization:</span> {{ item.total_efficiency }}</li>
                                 <li class="turbines__char-item"><span>Voltage:</span> {{ item.voltage }}</li>
                             </ul>
-                            <button class="more-info" data-toggle="modal" data-target="#turbines-model" @click="addId(index)">More</button>
+                            <button class="more-info" data-toggle="modal" data-target="#turbines-modal" @click="addId(index)">More</button>
                         </div>
                     </div>
                 </div>
@@ -29,8 +29,8 @@
 </template>
 
 <script>
-    import BlockTitle from '../../general/BlockTitle.vue'
-    import Modal from '../../general/Modal.vue'
+    import BlockTitle from '../../general/BlockTitle.vue';
+    import Modal from '../../general/Modal.vue';
 
     export default {
         props: ['lineUp'],
