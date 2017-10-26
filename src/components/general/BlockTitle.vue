@@ -30,6 +30,9 @@
         font-size: 24px;
         font-weight: 700;
         letter-spacing: 2px;
+        @media(max-width: 575px) {
+            font-size: 20px;
+        }
     }
     .separate {
         .green {

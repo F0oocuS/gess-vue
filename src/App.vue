@@ -31,6 +31,9 @@
         max-width: 100%;
         object-fit: cover;
     }
+    hr {
+        width: 100%;
+    }
     .text-center {
         text-align: center;
     }

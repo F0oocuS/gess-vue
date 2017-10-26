@@ -1,18 +1,64 @@
 <template>
     <main>
+        <app-banner :banner="banner"></app-banner>
+        <app-technology :technology="technology"></app-technology>
+        <app-modes :modes="modes"></app-modes>
         <app-line-up :lineUp="lineUp"></app-line-up>
     </main>
 </template>
 
 <script>
-    import LineUp from './TurbinesLineUp.vue'
+    import Banner from './TurbinesBanner.vue';
+    import Technology from './TurbinesTechnology.vue';
+    import Modes from './TurbinesModes.vue';
+    import LineUp from './TurbinesLineUp.vue';
 
     export default {
         data() {
             return {
-                banner: {},
-                technology: {},
-                modes: {},
+                banner: {
+                    title: 'Microturbines capstone',
+                    text: 'Reliable power generating equipment'
+                },
+                technology: {
+                    title: 'Technology',
+                    colorLine: 'colorLine',
+                    text: 'Result of American specialist research by order of NASA at the end of XX century:',
+                    list: [
+                        'Only one moving part of turbine',
+                        'No frictions',
+                        'No lubricants and coolants',
+                        'High reliability and long lifetime',
+                        'The best environmental performance - <9 ppmNOx',
+                        'Progressive technology controls the combustion process'
+                    ]
+                },
+                modes: {
+                    title: 'Available modes',
+                    list: [
+                        {
+                            title: 'Stand-alone',
+                            list: [
+                                'Electricity generation is independent from the grid',
+                                'Electricity parameters are tuning according to the voltage and current requirements of the load'
+                            ]
+                        },
+                        {
+                            title: 'Grid-connected',
+                            list: [
+                                'Electricity generation is independent from the grid',
+                                'Electricity parameters are tuning according to the voltage and current requirements of the load'
+                            ]
+                        },
+                        {
+                            title: 'Dual',
+                            list: [
+                                'Electricity generation is independent from the grid',
+                                'Electricity parameters are tuning according to the voltage and current requirements of the load'
+                            ]
+                        }
+                    ]
+                },
                 lineUp: {
                     title: 'The line-up',
                     list: [
@@ -135,6 +181,9 @@
             }
         },
         components: {
+            appBanner: Banner,
+            appTechnology: Technology,
+            appModes: Modes,
             appLineUp: LineUp
         }
     }
