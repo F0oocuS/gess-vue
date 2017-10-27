@@ -1,115 +1,91 @@
 <template>
-    <section class="panels">
-        <div class="panels__header">
-            <app-block-title-simple :blockTitleSimple="solarPanels.title"></app-block-title-simple>
-            <p class="panels__text">{{ solarPanels.text }}</p>
+    <section class="inverters">
+        <div class="inverters__header">
+            <app-block-title-simple :blockTitleSimple="inverters.title"></app-block-title-simple>
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-md-4 col-xl-2" v-for="(item, index) in solarPanels.list">
-                    <div class="panels__item">
-                        <div class="panels__name">
-                            <h4 class="panels__title">{{ item.name }}</h4>
-                            <div class="separate"></div>
-                            <p class="panels__dop-info">{{ item.dopInfo }}</p>
-                        </div>
-                        <div class="panels__desc">
+                <div class="col-sm-6 col-lg-3" v-for="(item, index) in inverters.list">
+                    <div class="inverters__item">
+                        <h4 class="inverters__name">{{ item.name }}</h4>
+                        <div class="inverters__desc">
                             <h4 class="desc-title">{{ item.name }}</h4>
                             <div class="separate"></div>
-                            <ul class="panels__char-list">
-                                <li class="panels__char-item"><span>Capacity: </span>{{ item.capacity }}</li>
-                                <li class="panels__char-item"><span>Size: </span>{{ item.sizes }}</li>
-                                <li class="panels__char-item"><span>Weight: </span>{{ item.weight }}</li>
+                            <ul class="inverters__char-list">
+                                <li class="inverters__char-item"><span>Capacity: </span>{{ item.capacity }}</li>
+                                <li class="inverters__char-item"><span>Size: </span>{{ item.sizes }}</li>
+                                <li class="inverters__char-item"><span>Weight: </span>{{ item.weight }}</li>
                             </ul>
-                            <button class="more-info" data-toggle="modal" data-target="#solar-modal" @click="addId(index)">More</button>
+                            <button class="more-info" data-toggle="modal" data-target="#inverters-modal" @click="addId(index)">More</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <app-solar-modal :object="solarPanels.list" :solarId="this.solarId"></app-solar-modal>
+
+        <app-inverters-modal :object="inverters.list" :invertersId="this.invertersId"></app-inverters-modal>
     </section>
 </template>
 
 <script>
     import BlockTitleSimple from '../../general/BlockTitleSimple.vue';
-    import UnorderedList from '../../general/UnorderedList.vue';
-    import SolarModal from '../../general/ModalSolar.vue';
+    import InvertersModal from '../../general/ModalInverters.vue';
 
     export default {
-        props: ['solarPanels'],
+        props: ['inverters'],
         data() {
             return {
-                solarId: 0
+                invertersId: 0
             }
         },
         methods: {
             addId(index) {
-                this.solarId = index;
+                this.invertersId = index;
             }
         },
         components: {
             appBlockTitleSimple: BlockTitleSimple,
-            appUnorderedList: UnorderedList,
-            appSolarModal: SolarModal
+            appInvertersModal: InvertersModal
         }
     }
 </script>
 
 <style lang="scss" scoped>
-    .panels {
+    .inverters {
+        background-color: #f6f6f6;
         padding-bottom: 10px;
-        &__header {
-            text-align: center;
-        }
-        &__text {
-            font-size: 14px;
-            font-weight: 300;
-        }
         &__item {
             display: flex;
             flex-direction: column;
             margin-bottom: 30px;
-            padding: 10px;
-            min-height: 270px;
+            padding: 30px;
+            min-height: 300px;
             position: relative;
-            background-color: #f6f6f6;
-            background-image: url(http://via.placeholder.com/270x370);
+            background-color: #fff;
+            background-image: url(http://via.placeholder.com/470x370);
             background-position: center top;
             background-size: contain;
             background-repeat: no-repeat;
             &:hover {
-                .panels__desc {
+                .inverters__desc {
                     opacity: 1;
                 }
-                .panels__name {
+                .inverters__name {
                     display: none;
                 }
             }
         }
         &__name {
             margin-top: auto;
-        }
-        &__title {
-            margin-bottom: 10px;
             font-family: "Roboto Slab", sans-serif;
-            font-size: 16px;
-            font-weight: 500;
+            font-size: 18px;
             letter-spacing: 1px;
-        }
-        .separate {
-            margin-bottom: 10px;
-            width: 50px;
-            height: 2px;
-            background-color: #bcc900;
-        }
-        &__dop-info {
-            margin-bottom: 0;
+            text-transform: uppercase;
         }
         &__desc {
             display: flex;
             flex-direction: column;
-            padding: 10px;
+            padding: 20px;
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background-color: rgba(1, 131, 1, .75);
@@ -123,11 +99,17 @@
                 line-height: 22px;
                 color: white;
             }
-            .panels__char-list {
+            .separate {
+                margin-bottom: 10px;
+                width: 50px;
+                height: 2px;
+                background-color: #bcc900;
+            }
+            .inverters__char-list {
                 padding: 0;
                 list-style: none;
             }
-            .panels__char-item {
+            .inverters__char-item {
                 font-size: 14px;
                 line-height: 20px;
                 span {
@@ -135,6 +117,7 @@
                 }
             }
             .more-info {
+                max-width: 150px;
                 margin-top: auto;
                 padding: 5px 10px;
                 position: relative;

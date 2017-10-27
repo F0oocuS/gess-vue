@@ -71,6 +71,11 @@
 </script>
 
 <style lang="scss" scoped>
+    @media(min-width: 768px) {
+        .block-title {
+            padding-top: 0;
+        }
+    }
     .modal {
         padding: 0;
     }
@@ -100,9 +105,6 @@
             span {
                 font-weight: 700;
             }
-        }
-        .block-title {
-            padding-top: 0;
         }
     }
 </style>

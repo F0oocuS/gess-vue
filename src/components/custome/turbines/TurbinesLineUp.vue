@@ -24,13 +24,13 @@
             </div>
         </div>
 
-        <app-modal :object="lineUp.list" :turbinesId="this.turbinesId"></app-modal>
+        <app-turbines :object="lineUp.list" :turbinesId="this.turbinesId"></app-turbines>
     </section>
 </template>
 
 <script>
     import BlockTitle from '../../general/BlockTitle.vue';
-    import Modal from '../../general/Modal.vue';
+    import TurbinesModal from '../../general/ModalTurbines.vue';
 
     export default {
         props: ['lineUp'],
@@ -41,7 +41,7 @@
         },
         components: {
             appBlockTitle: BlockTitle,
-            appModal: Modal
+            appTurbines: TurbinesModal
         },
         methods: {
             addId(index) {

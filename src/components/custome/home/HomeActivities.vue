@@ -60,7 +60,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .activities {
         background-color: #f6f6f6;
         &-item {

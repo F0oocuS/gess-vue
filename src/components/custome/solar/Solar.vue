@@ -4,7 +4,8 @@
         <app-desired :desired="desired"></app-desired>
         <app-equipment :equipment="equipment"></app-equipment>
         <app-solar-panels :solarPanels="solarPanels"></app-solar-panels>
-
+        <app-inverters :inverters="inverters"></app-inverters>
+        <app-mounting-system :mountingSystem="mountingSystem"></app-mounting-system>
     </main>
 </template>
 
@@ -13,6 +14,8 @@
     import Desired from './SolarDesired.vue';
     import Equipment from './SolarEquipment.vue';
     import SolarPanels from './SolarPanels.vue';
+    import Inverters from './SolarInverters.vue';
+    import MountingSystem from './SolarMountingSystem.vue';
 
     export default {
         data() {
@@ -149,6 +152,126 @@
                             ]
                         }
                     ]
+                },
+                inverters: {
+                    title: 'Inverters',
+                    list: [
+                        {
+                            id: 1,
+                            name: 'Protect PV.250',
+                            capacity: '250 kVA',
+                            sizes: '2100 x 2000 x 600 mm',
+                            weight: '1130 kg',
+                            features: [
+                                'Utility scale transformer-less design',
+                                'Up to 98,15 % conversion efficiency according to EN 50530 Norm w/o Transformer',
+                                'DC voltages up to 1,000 Vdc',
+                                'Designed for harsh environments',
+                                'Communication interfaces (Modbus / Can Bus)',
+                                'Monitoring, control, reporting and management tools',
+                                'Optional “copain mode” - two unit operation',
+                                'Medium voltage 10, 20 kV or other, as required'
+                            ]
+                        },
+                        {
+                            id: 2,
+                            name: 'Protect PV.560',
+                            capacity: '560 kVA',
+                            sizes: '2700 x 2000 x 600 mm',
+                            weight: '1650 kg',
+                            features: [
+                                'Utility scale transformer-less design',
+                                'Up to 98,15 % conversion efficiency according to EN 50530 Norm w/o Transformer',
+                                'DC voltages up to 1,000 Vdc',
+                                'Designed for harsh environments',
+                                'Communication interfaces (Modbus / Can Bus)',
+                                'Monitoring, control, reporting and management tools',
+                                'Optional “copain mode” - two unit operation',
+                                'Container and outdoor application',
+                                'Medium voltage 10, 20 kV or other, as required'
+                            ]
+                        },
+                        {
+                            id: 3,
+                            name: 'Protect PV.690',
+                            capacity: '690 kVA',
+                            sizes: '2700 x 2000 x 600 mm',
+                            weight: '1800 kg',
+                            features: [
+                                'Utility scale transformer-less design',
+                                'Up to 98,15 % conversion efficiency according to EN 50530 Norm w/o Transformer',
+                                'DC voltages up to 1,000 Vdc',
+                                'Designed for harsh environments',
+                                'Communication interfaces (Modbus / Can Bus)',
+                                'Monitoring, control, reporting and management tools',
+                                'Optional “copain mode” - two unit operation',
+                                'Container and outdoor application',
+                                'Medium voltage 10, 20 kV or other, as required'
+                            ]
+                        },
+                        {
+                            id: 4,
+                            name: 'Protect PV.880',
+                            capacity: '880 kVA',
+                            sizes: '2700 x 2000 x 600 mm',
+                            weight: '1850 kg',
+                            features: [
+                                'Utility scale transformer-less design',
+                                'Up to 98,15 % conversion efficiency according to EN 50530 Norm w/o Transformer',
+                                'DC voltages up to 1,000 Vdc',
+                                'Designed for harsh environments',
+                                'Communication interfaces (Modbus / Can Bus)',
+                                'Monitoring, control, reporting and management tools',
+                                'Optional “copain mode” - two unit operation',
+                                'Medium voltage 10, 20 kV or other, as required'
+                            ]
+                        }
+                    ]
+                },
+                mountingSystem: {
+                    title: 'Mounting systems',
+                    list: [
+                        {
+                            id: 1,
+                            name: 'Static single PROP',
+                            system_type: 'static',
+                            tilt: '20°-70°',
+                            prop_type: 'single row',
+                            pv_models: 'framed and frameless',
+                            pv_models_orientation: 'vertical / horisontal',
+                            numbers_of_rows: '1/2/3'
+                        },
+                        {
+                            id: 2,
+                            name: 'Static dual PROP',
+                            system_type: 'static',
+                            tilt: '20°-70°',
+                            prop_type: 'dual rows',
+                            pv_modules: 'framed and frameless',
+                            pv_modules_orientation: 'vertical / horisontal',
+                            number_of_rows: '2/3/4/5'
+                        },
+                        {
+                            id: 3,
+                            name: 'Dynamic automatic single axes',
+                            system_type: 'dynamic',
+                            tilt: '25°-50°',
+                            prop_type: 'dual rows',
+                            pv_models: 'framed and frameless',
+                            pv_models_orientation: 'vertical',
+                            numbers_of_rows: '2'
+                        },
+                        {
+                            id: 4,
+                            name: 'AS-Sunflower DYNAMIC',
+                            system_type: 'dynamic, automatic, selfpositioning',
+                            tilt: '90°-180°',
+                            prop_type: 'single prop',
+                            pv_models: 'framed',
+                            pv_models_orientation: 'horisontal',
+                            numbers_of_rows: '1'
+                        }
+                    ]
                 }
             }
         },
@@ -156,7 +279,9 @@
             appBanner: Banner,
             appDesired: Desired,
             appEquipment: Equipment,
-            appSolarPanels: SolarPanels
+            appSolarPanels: SolarPanels,
+            appInverters: Inverters,
+            appMountingSystem: MountingSystem
         }
     }
 </script>
