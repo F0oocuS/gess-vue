@@ -1,69 +1,55 @@
 <template>
-    <div class="article-grid">
-        <article class="article" v-for="item in articles">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="article__img">
-                            <img src="http://via.placeholder.com/520x350" alt="">
+    <section class="news">
+        <div class="page-title">
+            <app-block-title :blockTitle="pageName" :colorLine="true"></app-block-title>
+        </div>
+        <div class="article-grid">
+            <article class="article" v-for="item in articles">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="article__img">
+                                <img src="http://via.placeholder.com/520x350" alt="">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <div class="article__body">
-                            <h3 class="article__title">{{ item.title }}</h3>
-                            <div class="separate"></div>
-                            <p class="article__desc">{{ item.desc }}</p>
-                            <router-link to="/news/id" class="article__read">Continue reading</router-link>
-                            <div class="article__date">{{ item.date }}</div>
+                        <div class="col-sm-8">
+                            <div class="article__body">
+                                <h3 class="article__title">{{ item.title }}</h3>
+                                <div class="separate"></div>
+                                <p class="article__desc">{{ item.desc }}</p>
+                                <router-link :to="'/news/' + item.id" class="article__read">Continue reading</router-link>
+                                <div class="article__date">{{ item.date }}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </article>
-    </div>
+            </article>
+        </div>
+    </section>
 </template>
 
 <script>
-    import OneNews from './OneNews.vue';
+    import BlockTitle from '../../general/BlockTitle.vue';
 
     export default {
+        props: ['articles'],
         data() {
             return {
-                articles: [
-                    {
-                        id: 1,
-                        title: 'Gess Ukraine constructing renewable energy facilities in Chornobyl',
-                        desc: 'In the summer of 2016, the Ukrainian government introduced a Chornobyl Solar project to the Ukrainian and international community. The aim of the project is to turn the land affected by one of the world’s worst nuclear disasters into a massive solar park, which is scheduled for implementation in 2017.',
-                        date: '2017-02-08'
-                    },
-                    {
-                        id: 2,
-                        title: 'Gess Ukraine constructing renewable energy facilities in Chornobyl',
-                        desc: 'In the summer of 2016, the Ukrainian government introduced a Chornobyl Solar project to the Ukrainian and international community. The aim of the project is to turn the land affected by one of the world’s worst nuclear disasters into a massive solar park, which is scheduled for implementation in 2017.',
-                        date: '2017-02-08'
-                    },
-                    {
-                        id: 3,
-                        title: 'Gess Ukraine constructing renewable energy facilities in Chornobyl',
-                        desc: 'In the summer of 2016, the Ukrainian government introduced a Chornobyl Solar project to the Ukrainian and international community. The aim of the project is to turn the land affected by one of the world’s worst nuclear disasters into a massive solar park, which is scheduled for implementation in 2017.',
-                        date: '2017-02-08'
-                    },
-                    {
-                        id: 4,
-                        title: 'Gess Ukraine constructing renewable energy facilities in Chornobyl',
-                        desc: 'In the summer of 2016, the Ukrainian government introduced a Chornobyl Solar project to the Ukrainian and international community. The aim of the project is to turn the land affected by one of the world’s worst nuclear disasters into a massive solar park, which is scheduled for implementation in 2017.',
-                        date: '2017-02-08'
-                    }
-                ]
+                newsId: 0,
+                pageName: 'News'
             }
         },
         components: {
-            appOneNews: OneNews
+            appBlockTitle: BlockTitle
         }
     }
 </script>
 
 <style lang="scss">
+    .page-title {
+        background-color: #f6f6f6;
+        padding: 20px;
+    }
     .article {
         padding: 35px 0;
         &:not(:last-child) {

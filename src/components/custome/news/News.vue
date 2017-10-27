@@ -1,33 +1,40 @@
 <template>
     <main>
-        <div class="page-title">
-            <app-block-title :blockTitle="pageName" colorLine="colorLine"></app-block-title>
-        </div>
-        <app-news-grid></app-news-grid>
+        <router-view :articles="articles" :news="articles[1]"></router-view>
     </main>
 </template>
 
 <script>
-    import BlockTitle from '../../general/BlockTitle.vue';
-    import NewsGrid from './NewsGrid.vue';
-
     export default {
         data() {
             return {
-                pageName: 'News',
-                colorLine: true
+                articles: [
+                    {
+                        id: 1,
+                        title: 'Gess Ukraine constructing renewable energy facilities in Chornobyl',
+                        desc: 'In the summer of 2016, the Ukrainian government introduced a Chornobyl Solar project to the Ukrainian and international community. The aim of the project is to turn the land affected by one of the world’s worst nuclear disasters into a massive solar park, which is scheduled for implementation in 2017.',
+                        date: '2014-02-08'
+                    },
+                    {
+                        id: 2,
+                        title: 'Gess Ukraine constructing renewable energy facilities in Chornobyl',
+                        desc: 'In the summer of 2016, the Ukrainian government introduced a Chornobyl Solar project to the Ukrainian and international community. The aim of the project is to turn the land affected by one of the world’s worst nuclear disasters into a massive solar park, which is scheduled for implementation in 2017.',
+                        date: '2015-02-08'
+                    },
+                    {
+                        id: 3,
+                        title: 'Gess Ukraine constructing renewable energy facilities in Chornobyl',
+                        desc: 'In the summer of 2016, the Ukrainian government introduced a Chornobyl Solar project to the Ukrainian and international community. The aim of the project is to turn the land affected by one of the world’s worst nuclear disasters into a massive solar park, which is scheduled for implementation in 2017.',
+                        date: '2016-02-08'
+                    },
+                    {
+                        id: 4,
+                        title: 'Gess Ukraine constructing renewable energy facilities in Chornobyl',
+                        desc: 'In the summer of 2016, the Ukrainian government introduced a Chornobyl Solar project to the Ukrainian and international community. The aim of the project is to turn the land affected by one of the world’s worst nuclear disasters into a massive solar park, which is scheduled for implementation in 2017.',
+                        date: '2017-02-08'
+                    }
+                ]
             }
-        },
-        components: {
-            appBlockTitle: BlockTitle,
-            appNewsGrid: NewsGrid
         }
     }
 </script>
-
-<style>
-    .page-title {
-        background-color: #f6f6f6;
-        padding: 20px;
-    }
-</style>
