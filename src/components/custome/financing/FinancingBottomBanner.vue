@@ -1,7 +1,7 @@
 <template>
     <section class="bottom-banner">
         <img src="../../../assets/logoBig.png" alt="">
-        <p class="bottom-banner-title">
+        <p class="bottom-banner__title">
             Investments to energy projects today opens
             for enterprises an opportunity not only to
             <span>Improve competitiveness</span>, but also to fully
@@ -27,7 +27,7 @@
         background-image: url(../../../assets/capital-b.jpg);
         background-position: center;
         background-size: cover;
-        &-title {
+        &__title {
             margin-top: auto;
             max-width: 570px;
             font-size: 16px;

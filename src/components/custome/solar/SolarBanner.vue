@@ -1,7 +1,6 @@
 <template>
     <section class="banner">
-        <h1 class="title">{{ banner.title }}</h1>
-
+        <h1 class="banner__title">{{ banner.title }}</h1>
         <ul class="banner-list">
             <li class="banner-list__item" v-for="item in banner.list">
                 <p class="item-value"><span>{{ item.value }}</span> mw</p>
@@ -28,14 +27,14 @@
         background-position: center;
         background-size: cover;
         text-align: center;
-    }
-    .title {
-        font-family: 'Roboto Slab', serif;
-        font-size: 24px;
-        font-weight: 700;
-        letter-spacing: 2px;
-        color: white;
-        text-transform: uppercase;
+        &__title {
+            font-family: 'Roboto Slab', serif;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: white;
+            text-transform: uppercase;
+        }
     }
     .banner-list {
         display: flex;
@@ -49,32 +48,32 @@
         @media(max-width: 767px) {
             display: none;
         }
-    }
-    .banner-list__item {
-        padding: 15px 50px;
-        max-width: 250px;
-        text-align: center;
-        @media(max-width: 1200px) {
-            padding: 15px 30px;
-        }
-        @media(max-width: 991px) {
-            padding: 15px 20px;
-        }
-        .item-value {
-            font-family: 'Roboto Slab', serif;
-            font-size: 24px;
-            font-weight: 300;
-            text-transform: uppercase;
-            span {
-                font-size: 36px;
-                font-weight: 500;
+        &__item {
+            padding: 15px 50px;
+            max-width: 250px;
+            text-align: center;
+            @media(max-width: 1200px) {
+                padding: 15px 30px;
             }
-        }
-        .item-region, .item-date {
-            margin: 0;
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 18px;
+            @media(max-width: 991px) {
+                padding: 15px 20px;
+            }
+            .item-value {
+                font-family: 'Roboto Slab', serif;
+                font-size: 24px;
+                font-weight: 300;
+                text-transform: uppercase;
+                span {
+                    font-size: 36px;
+                    font-weight: 500;
+                }
+            }
+            .item-region, .item-date {
+                margin: 0;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 18px;
+            }
         }
     }
 </style>

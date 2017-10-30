@@ -10,7 +10,7 @@
                         <p class="turbines__model">{{ item.model }}</p>
                         <div class="turbines__desc">
                             <h3 class="turbines__model">{{ item.model }}</h3>
-                            <div class="separate"></div>
+                            <div class="turbines__separate"></div>
                             <ul class="turbines__char-list">
                                 <li class="turbines__char-item"><span>Capacity:</span> {{ item.capacity }}</li>
                                 <li class="turbines__char-item"><span>Electrical efficiency:</span> {{ item.electrical_efficiency }}</li>
@@ -89,7 +89,7 @@
                 margin-bottom: 15px;
                 font-weight: 700;
             }
-            .separate {
+            .turbines__separate {
                 width: 100px;
                 height: 2px;
                 margin-bottom: 20px;

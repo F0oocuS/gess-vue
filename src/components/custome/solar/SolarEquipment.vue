@@ -2,7 +2,7 @@
     <section class="equipment">
         <app-block-title :blockTitle="equipment.title" :colorLine="true"></app-block-title>
         <div class="container">
-            <p class="equipment-text">
+            <p class="equipment__text">
                 {{ equipment.text }}
             </p>
         </div>
@@ -25,10 +25,10 @@
         padding-top: 20px;
         padding-bottom: 70px;
         background-color: #f6f6f6;
-    }
-    .equipment-text {
-        font-size: 16px;
-        line-height: 24px;
-        text-align: center;
+        &__text {
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+        }
     }
 </style>

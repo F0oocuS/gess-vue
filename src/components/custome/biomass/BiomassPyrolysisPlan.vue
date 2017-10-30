@@ -5,8 +5,8 @@
             <div class="pyrolysis-plan__img">
                 <img src="../../../assets/scheme-image-en.png" alt="Plan image">
             </div>
-            <ul class="pyrolysis-plan-list">
-                <li class="list-item" v-for="(item, index) in pyrolysisPlan.list"><span>{{ index + 1 }}</span>{{ item }}</li>
+            <ul class="pyrolysis-plan__list">
+                <li class="pyrolysis-plan__item" v-for="(item, index) in pyrolysisPlan.list"><span>{{ index + 1 }}</span>{{ item }}</li>
             </ul>
         </div>
     </section>
@@ -29,16 +29,16 @@
         &__img {
             text-align: center;
         }
-    }
-    .pyrolysis-plan-list {
-        margin: 0;
-        padding: 40px 0;
-        list-style: none;
-        column-count: 2;
-        @media(max-width: 991px) {
-            column-count: 1;
+        &__list {
+            margin: 0;
+            padding: 40px 0;
+            list-style: none;
+            column-count: 2;
+            @media(max-width: 991px) {
+                column-count: 1;
+            }
         }
-        .list-item {
+        &__item {
             padding-left: 50px;
             position: relative;
             font-size: 16px;

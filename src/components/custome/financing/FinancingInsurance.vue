@@ -3,12 +3,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <div class="insurance-info">
+                    <div class="insurance__info">
                         <app-block-title :blockTitle="insurance.title" :colorLine="insurance.colorLine"></app-block-title>
-
-                        <p class="insurance-info__text">{{ insurance.text }}</p>
-
-                        <app-unordered-list :list="insurance.list"></app-unordered-list>
+                        <p class="insurance__text">{{ insurance.text }}</p>
+                        <div class="insurance__list">
+                            <app-unordered-list :list="insurance.list"></app-unordered-list>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -37,13 +37,13 @@
 <style lang="scss">
     .insurance {
         background-color: #f6f6f6;
-        &-info {
+        &__info {
             padding-left: 30px;
             padding-right: 30px;
-            &__text {
-                font-size: 16px;
-                font-weight: 300;
-            }
+        }
+        &__text {
+            font-size: 16px;
+            font-weight: 300;
         }
     }
 </style>

@@ -2,7 +2,7 @@
     <section class="pyrolysis">
         <app-block-title :blockTitle="pyrolysis.title" :colorLine="pyrolysis.colorLine"></app-block-title>
 
-        <p class="pyrolysis-info">
+        <p class="pyrolysis__info">
             <span>Fast pyrolysis</span> is a process in which organic materials are
             rapidly heated to 400 - 800 °C in the absence of air. <br>
             Under these conditions, organic vapors, pyrolysis gas, and charcoal are produced.
@@ -30,14 +30,14 @@
         background-position: center;
         background-size: cover;
         background-blend-mode: multiply;
-    }
-    .pyrolysis-info {
-        margin: 0;
-        color: white;
-        text-align: center;
-        span {
-            font-weight: 500;
-            text-transform: uppercase;
+        &__info {
+            margin: 0;
+            color: white;
+            text-align: center;
+            span {
+                font-weight: 500;
+                text-transform: uppercase;
+            }
         }
     }
 </style>

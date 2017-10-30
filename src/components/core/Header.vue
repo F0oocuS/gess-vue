@@ -10,10 +10,7 @@
                 <ul class="navbar-nav mr-auto ml-auto">
                     <router-link tag="li" to="/" class="nav-item" exact>
                         <a class="nav-link">Main <span class="sr-only">(current)</span></a>
-                    </router-link><!--
-                    <li class="nav-item">
-                        <a class="nav-link" href="#activities">Activities</a>
-                    </li>-->
+                    </router-link>
                     <router-link tag="li" to="/about" class="nav-item">
                         <a class="nav-link">About us</a>
                     </router-link>
@@ -40,16 +37,6 @@
     </header>
 </template>
 
-<script>
-    export default {
-        data() {
-            return {
-                name: 'header'
-            }
-        }
-    }
-</script>
-
 <style lang="scss">
     .navbar {
         padding-top: 0;
@@ -61,24 +48,20 @@
             background-color: rgba(255, 255, 255, .96);
         }
     }
-
     .navbar-brand {
         img {
             max-height: 40px;
         }
     }
-
     .navbar-toggler {
         margin-top: 7px;
         margin-bottom: 7px;
     }
-
     .navbar-collapse {
         @media(max-width: 991px) {
             border-bottom: 3px solid #017101;
         }
     }
-
     .navbar-nav {
         .nav-item {
             text-transform: uppercase;
@@ -106,7 +89,6 @@
             }
         }
     }
-
     .dop-info {
         display: flex;
         align-items: center;

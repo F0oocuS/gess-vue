@@ -1,7 +1,7 @@
 <template>
     <section class="banner">
         <img src="../../../assets/logoBig.png" alt="">
-        <h2 class="banner-title">{{ bannerTitle }}</h2>
+        <h2 class="banner__title">{{ bannerTitle }}</h2>
     </section>
 </template>
 
@@ -26,7 +26,7 @@
         background-image: url('../../../assets/banner.jpg');
         background-size: cover;
         background-position: 50% 50%;
-        &-title {
+        &__title {
             margin-top: auto;
             margin-bottom: 0;
             padding: 15px 40px;

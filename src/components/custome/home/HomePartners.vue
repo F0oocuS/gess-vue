@@ -4,9 +4,9 @@
             <div class="row">
                 <app-block-title :blockTitle="blockTitle"></app-block-title>
                 <div class="col-sm-6 col-md-4 col-lg-3" v-for="item in partnersList">
-                    <div class="partners-item">
-                        <p class="partners-item__name">{{ item.name }}</p>
-                        <p class="partners-item__desc">{{ item.desc }}</p>
+                    <div class="partners__item">
+                        <p class="partners__name">{{ item.name }}</p>
+                        <p class="partners__desc">{{ item.desc }}</p>
                     </div>
                 </div>
             </div>
@@ -39,12 +39,14 @@
 </script>
 
 <style lang="scss">
-    .partners-item {
-        margin-bottom: 30px;
-        padding: 20px;
-        text-align: center;
-        border: 2px solid #017101;
-        border-radius: 5px;
+    .partners {
+        &__item {
+            margin-bottom: 30px;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #017101;
+            border-radius: 5px;
+        }
         &__name {
             font-size: 36px;
         }

@@ -1,7 +1,7 @@
 <template>
     <section class="banner">
-        <h1 class="banner-title">{{ banner.title }}</h1>
-        <p class="banner-text">{{ banner.text }}</p>
+        <h1 class="banner__title">{{ banner.title }}</h1>
+        <p class="banner__text">{{ banner.text }}</p>
     </section>
 </template>
 
@@ -21,14 +21,14 @@
         background-image: url(../../../assets/banner-microturbines.jpg);
         background-position: center;
         background-size: cover;
-        &-title {
+        &__title {
             font-size: 24px;
             line-height: 35px;
             letter-spacing: 1px;
             text-align: center;
             text-transform: uppercase;
         }
-        &-text {
+        &__text {
             margin-top: auto;
             padding: 10px 40px;
             background: rgba(24,114,12,0.78);

@@ -1,6 +1,6 @@
 <template>
     <section class="banner">
-        <h1 class="banner-title">{{ banner.title }}</h1>
+        <h1 class="banner__title">{{ banner.title }}</h1>
     </section>
 </template>
 
@@ -19,7 +19,7 @@
         background-image: url(../../../assets/banner-financing.jpg);
         background-position: center;
         background-size: cover;
-        &-title {
+        &__title {
             font-family: 'Roboto Slab', serif;
             font-size: 24px;
             font-weight: 700;

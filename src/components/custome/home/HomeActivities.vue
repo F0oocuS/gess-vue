@@ -8,7 +8,9 @@
                         <div class="activities-item__info" v-bind:class="{'activities-item__info_right': item.side}">
                             <h4 class="activities-item__title">{{ item.name }}</h4>
                             <div class="activities-item__separate"></div>
-                            <app-unordered-list :list="item.list"></app-unordered-list>
+                            <div class="activities-item__list">
+                                <app-unordered-list :list="item.list"></app-unordered-list>
+                            </div>
                             <router-link :to="{ path: item.link }" class="activities-item__more">More</router-link>
                         </div>
                     </div>
@@ -70,27 +72,7 @@
     .activities {
         background-color: #f6f6f6;
         &-item {
-            width: 50%;/*
-            &:nth-child(2) {
-                .activities-item__body {
-                    background-image: url(../../../assets/capstone.jpg);
-                }
-            }
-            &:nth-child(3) {
-                .activities-item__body {
-                    background-image: url(../../../assets/solar-energy.jpg);
-                }
-            }
-            &:nth-child(4) {
-                .activities-item__body {
-                    background-image: url(../../../assets/biogas.jpg);
-                }
-            }
-            &:nth-child(5) {
-                .activities-item__body {
-                    background-image: url(../../../assets/financing.jpg);
-                }
-            }*/
+            width: 50%;
             &__body {
                 height: 400px;
                 background-repeat: no-repeat;
@@ -136,6 +118,11 @@
                 height: 2px;
                 background-color: #bcc900;
             }
+            &__list {
+                .list {
+                    color: #fff;
+                }
+            }
             &__more {
                 display: inline-block;
                 margin-top: auto;
@@ -170,9 +157,6 @@
                     border-top: 1px solid #bcc900;
                     transform: rotate(45deg);
                 }
-            }
-            .list {
-                color: #fff;
             }
             @media(max-width: 991px) {
                 &__body {
