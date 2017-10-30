@@ -15,7 +15,7 @@
                         <div class="col-sm-8">
                             <div class="article__body">
                                 <h3 class="article__title">{{ item.title }}</h3>
-                                <div class="article__separate"></div>
+                                <div class="separate"></div>
                                 <p class="article__desc">{{ item.desc }}</p>
                                 <footer class="article__footer">
                                     <router-link :to="'/news/' + item.id" class="article__read" @click="addId(index)">Continue reading</router-link>
@@ -80,7 +80,7 @@
             font-weight: 500;
             text-transform: uppercase;
         }
-        &__separate {
+        .separate {
             margin-bottom: 20px;
             width: 100px;
             height: 2px;

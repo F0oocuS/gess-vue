@@ -118,11 +118,7 @@
                 height: 2px;
                 background-color: #bcc900;
             }
-            &__list {
-                .list {
-                    color: #fff;
-                }
-            }
+
             &__more {
                 display: inline-block;
                 margin-top: auto;
