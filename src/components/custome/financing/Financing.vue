@@ -10,7 +10,9 @@
                     </p>
                 </div>
                 <div class="col-md-6">
-                    <img src="http://via.placeholder.com/500x350" alt="">
+                    <div class="row">
+                        <img src="../../../assets/gess-ukraine-b.jpg" alt="">
+                    </div>
                 </div>
             </div>
         </div>

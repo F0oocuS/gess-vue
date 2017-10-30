@@ -10,7 +10,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <img src="http://via.placeholder.com/900x600" alt="">
+                    <img src="../../../assets/reliable-technology-b.jpg" alt="">
                 </div>
             </div>
         </div>

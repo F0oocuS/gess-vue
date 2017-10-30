@@ -24,7 +24,7 @@
         height: 430px;
         padding-top: 60px;
         padding-bottom: 20px;
-        background-image: url(http://via.placeholder.com/900x600);
+        background-image: url(../../../assets/capital-b.jpg);
         background-position: center;
         background-size: cover;
         &-title {

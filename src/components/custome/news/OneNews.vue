@@ -9,9 +9,10 @@
                 </div>
                 <div class="col-md-7">
                     <div class="news__body">
-                        <h1 class="news__title">{{ news.title }}</h1>
-                        <p class="news__desc">{{ news.desc }}</p>
-                        <div class="news__date">{{ news.date }}</div>
+                        <h1 class="news__title">{{ news[$route.params.id - 1].title }}</h1>
+                        <div class="news__separate"></div>
+                        <p class="news__desc">{{ news[$route.params.id - 1].desc }}</p>
+                        <div class="news__date">{{ news[$route.params.id - 1].date }}</div>
                     </div>
                 </div>
             </div>
@@ -28,5 +29,22 @@
 <style lang="scss" scoped>
     .news {
         padding: 50px 0;
+        &__body {
+            display: flex;
+            flex-direction: column;
+        }
+        &__title {
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+        &__separate {
+            margin-bottom: 20px;
+            width: 100%;
+            height: 1px;
+            background-color: #f6f6f6;
+        }
+        &__date {
+            text-align: right;
+        }
     }
 </style>

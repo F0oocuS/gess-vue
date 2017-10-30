@@ -2,7 +2,9 @@
     <section class="pyrolysis-plan">
         <app-block-title :blockTitle="pyrolysisPlan.title" :colorLine="pyrolysisPlan.colorLine"></app-block-title>
         <div class="container">
-            <img src="http://via.placeholder.com/900x600" alt="Plan image">
+            <div class="pyrolysis-plan__img">
+                <img src="../../../assets/scheme-image-en.png" alt="Plan image">
+            </div>
             <ul class="pyrolysis-plan-list">
                 <li class="list-item" v-for="(item, index) in pyrolysisPlan.list"><span>{{ index + 1 }}</span>{{ item }}</li>
             </ul>
@@ -24,6 +26,9 @@
 <style lang="scss">
     .pyrolysis-plan {
         background-color: #f6f6f6;
+        &__img {
+            text-align: center;
+        }
     }
     .pyrolysis-plan-list {
         margin: 0;

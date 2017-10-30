@@ -18,7 +18,7 @@
         align-items: center;
         height: 450px;
         padding: 40px 0 30px;
-        background-image: url(http://via.placeholder.com/900x600);
+        background-image: url(../../../assets/banner-microturbines.jpg);
         background-position: center;
         background-size: cover;
         &-title {

@@ -24,7 +24,7 @@
         flex-direction: column;
         height: 450px;
         padding-top: 30px;
-        background-image: url(http://via.placeholder.com/900x600);
+        background-image: url(../../../assets/banner-sun.jpg);
         background-position: center;
         background-size: cover;
         text-align: center;

@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="tech-image">
-                        <img src="http://via.placeholder.com/900x900" alt="">
+                        <img src="../../../assets/turbines-tecnologie.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -33,8 +33,10 @@
 </script>
 
 <style lang="scss">
-    .technology {
-        /*background-color: #f6f6f6;*/
+    .tech-image {
+        img {
+            object-fit: contain;
+        }
     }
     .tech-info {
         &__text {

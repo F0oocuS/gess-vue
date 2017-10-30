@@ -9,7 +9,9 @@
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <img src="http://via.placeholder.com/700x291" alt="">
+                    <div class="row">
+                        <img src="../../../assets/priorities-b.jpg" alt="">
+                    </div>
                 </div>
             </div>
         </div>

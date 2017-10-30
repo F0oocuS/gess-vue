@@ -3,7 +3,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <img src="http://via.placeholder.com/425x293" alt="">
+                    <div class="row">
+                        <img src="../../../assets/specialization-b1.jpg" alt="">
+                    </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="spec-info">
@@ -24,13 +26,17 @@
                     <app-unordered-list :list="specialization.list"></app-unordered-list>
                 </div>
                 <div class="col-lg-8">
-                    <img src="http://via.placeholder.com/830x293" alt="">
+                    <div class="row">
+                        <img src="../../../assets/specialization-b2.jpg" alt="">
+                    </div>
                 </div>
             </div>
-            <div class="info-block">
-                <div class="info-block__text">
-                    Our team has been in the energy industry since 1997<br>
-                    with over <span>350 implemented projects</span> worldwide.
+            <div class="row">
+                <div class="info-block">
+                    <div class="info-block__text">
+                        Our team has been in the energy industry since 1997<br>
+                        with over <span>350 implemented projects</span> worldwide.
+                    </div>
                 </div>
             </div>
         </div>
@@ -67,7 +73,7 @@
     }
     .info-block {
         width: 100%;
-        background-image: url(http://via.placeholder.com/730x293);
+        background-image: url(../../../assets/specialization-b3.jpg);
         background-position: center;
         background-size: cover;
         &__text {

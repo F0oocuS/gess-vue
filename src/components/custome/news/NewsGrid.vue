@@ -4,7 +4,7 @@
             <app-block-title :blockTitle="pageName" :colorLine="true"></app-block-title>
         </div>
         <div class="article-grid">
-            <article class="article" v-for="item in articles">
+            <article class="article" v-for="(item, index) in articles">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-4">
@@ -17,8 +17,10 @@
                                 <h3 class="article__title">{{ item.title }}</h3>
                                 <div class="separate"></div>
                                 <p class="article__desc">{{ item.desc }}</p>
-                                <router-link :to="'/news/' + item.id" class="article__read">Continue reading</router-link>
-                                <div class="article__date">{{ item.date }}</div>
+                                <footer class="article__footer">
+                                    <router-link :to="'/news/' + item.id" class="article__read" @click="addId(index)">Continue reading</router-link>
+                                    <div class="article__date">{{ item.date }}</div>
+                                </footer>
                             </div>
                         </div>
                     </div>
@@ -36,25 +38,27 @@
         data() {
             return {
                 newsId: 0,
-                pageName: 'News'
+                pageName: 'News',
             }
         },
         components: {
             appBlockTitle: BlockTitle
+        },
+        methods: {
+            addId(index) {
+                this.newsId = index;
+            }
         }
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .page-title {
         background-color: #f6f6f6;
         padding: 20px;
     }
     .article {
         padding: 35px 0;
-        &:not(:last-child) {
-            /*margin-bottom: 20px;*/
-        }
         &:nth-child(2n) {
             background-color: #f6f6f6;
         }
@@ -68,6 +72,7 @@
             flex-direction: column;
             justify-content: space-around;
             padding: 20px;
+            height: 100%;
         }
         &__title {
             margin-bottom: 20px;
@@ -84,10 +89,24 @@
         &__desc {
             margin-bottom: 20px;
             font-size: 16px;
+            max-height: 70px;
+            overflow: hidden;
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: auto;
         }
         &__read {
+            color: #017101;
+            font-size: 16px;
+            text-decoration: underline;
+            &:hover {
+                color: #017101;
+            }
         }
         &__date {
+            font-size: 16px;
         }
     }
 </style>

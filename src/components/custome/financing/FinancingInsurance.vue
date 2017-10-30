@@ -12,7 +12,9 @@
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <img src="http://via.placeholder.com/600x600" alt="">
+                    <div class="row">
+                        <img src="../../../assets/project-insurance-b.jpg" alt="">
+                    </div>
                 </div>
             </div>
         </div>

@@ -3,7 +3,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="http://via.placeholder.com/600x600" alt="">
+                    <div class="row">
+                        <img src="../../../assets/financing-option-b.jpg" alt="">
+                    </div>
                 </div>
                 <div class="col-md-8">
                     <div class="options-info">

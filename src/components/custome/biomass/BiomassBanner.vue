@@ -19,7 +19,7 @@
         flex-direction: column;
         padding: 60px 0 20px;
         min-height: 500px;
-        background-image: url(http://via.placeholder.com/900x600);
+        background-image: url(../../../assets/banner-biogas.jpg);
         background-position: center;
         background-size: cover;
         text-align: center;

@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="http://via.placeholder.com/660x600" alt="">
+                    <img src="../../../assets/condition-b.jpg" alt="">
                 </div>
                 <div class="col-md-6">
                     <div class="desired-info">

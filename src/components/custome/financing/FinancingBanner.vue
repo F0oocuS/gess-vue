@@ -16,7 +16,7 @@
         align-items: center;
         justify-content: center;
         min-height: 500px;
-        background-image: url(http://via.placeholder.com/900x600);
+        background-image: url(../../../assets/banner-financing.jpg);
         background-position: center;
         background-size: cover;
         &-title {

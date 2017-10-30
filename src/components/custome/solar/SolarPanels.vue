@@ -74,7 +74,7 @@
             min-height: 270px;
             position: relative;
             background-color: #f6f6f6;
-            background-image: url(http://via.placeholder.com/270x370);
+            background-image: url(http://via.placeholder.com/300x350);
             background-position: center top;
             background-size: contain;
             background-repeat: no-repeat;

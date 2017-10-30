@@ -2,13 +2,15 @@
     <section class="activities" id="activities">
         <div class="container">
             <div class="row">
-                <app-block-title :blockTitle="blockTitle" :colorLine="colorLine"></app-block-title>
+                <app-block-title :blockTitle="blockTitle" v-bind:colorLine="colorLine"></app-block-title>
                 <div class="activities-item" v-for="(item, index) in activities">
-                    <div class="activities-item__info" v-bind:class="{'activities-item__info_right': item.side}">
-                        <h4 class="activities-item__title">{{ item.name }}</h4>
-                        <div class="activities-item__separate"></div>
-                        <app-unordered-list :list="item.list"></app-unordered-list>
-                        <router-link :to="{ path: item.link }" class="activities-item__more">More</router-link>
+                    <div class="activities-item__body" v-bind:style="{ backgroundImage: 'url(' + item.image + ')'}">
+                        <div class="activities-item__info" v-bind:class="{'activities-item__info_right': item.side}">
+                            <h4 class="activities-item__title">{{ item.name }}</h4>
+                            <div class="activities-item__separate"></div>
+                            <app-unordered-list :list="item.list"></app-unordered-list>
+                            <router-link :to="{ path: item.link }" class="activities-item__more">More</router-link>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -30,25 +32,29 @@
                         name: 'Capstone Microturbines',
                         list: ['Reliable co-generation equipment'],
                         side: true,
-                        link: '/turbines'
+                        link: '/turbines',
+                        image: 'dist/capstone.jpg'
                     },
                     {
                         name: 'Solar Power Plants',
                         list: ['Complex solutions', 'Equipment and components'],
                         side: true,
-                        link: '/solar'
+                        link: '/solar',
+                        image: 'dist/solar-energy.jpg'
                     },
                     {
                         name: 'Biomass Projects',
                         list: ['Fast Pyrolysis Technology', 'Biogas equipment'],
                         side: false,
-                        link: '/biomass'
+                        link: '/biomass',
+                        image: 'dist/biogas.jpg'
                     },
                     {
                         name: 'Financing options',
                         list: ['Consulting services', 'Individual investment programs'],
                         side: false,
-                        link: '/financing'
+                        link: '/financing',
+                        image: 'dist/financing.jpg'
                     },
                 ]
             }
@@ -60,16 +66,37 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
     .activities {
         background-color: #f6f6f6;
         &-item {
-            height: 400px;
-            width: 50%;
-            background-image: url('http://via.placeholder.com/220x150');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
+            width: 50%;/*
+            &:nth-child(2) {
+                .activities-item__body {
+                    background-image: url(../../../assets/capstone.jpg);
+                }
+            }
+            &:nth-child(3) {
+                .activities-item__body {
+                    background-image: url(../../../assets/solar-energy.jpg);
+                }
+            }
+            &:nth-child(4) {
+                .activities-item__body {
+                    background-image: url(../../../assets/biogas.jpg);
+                }
+            }
+            &:nth-child(5) {
+                .activities-item__body {
+                    background-image: url(../../../assets/financing.jpg);
+                }
+            }*/
+            &__body {
+                height: 400px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
             &__info {
                 display: flex;
                 flex-direction: column;
@@ -148,7 +175,9 @@
                 color: #fff;
             }
             @media(max-width: 991px) {
-                padding: 20px;
+                &__body {
+                    padding: 20px;
+                }
                 &__info {
                     width: 100%;
                     &:before {
