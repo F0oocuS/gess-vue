@@ -10,16 +10,16 @@ import Biomass from './components/custome/biomass/Biomass.vue';
 import Financing from './components/custome/financing/Financing.vue';
 
 export const routes = [
-    { path: '/', component: Home },
-    { path: '/about', component: About },
-    { path: '/contacts', component: Contacts },
-    { path: '/news', component: News,  children: [
+    { path: 'gess-vue/', component: Home },
+    { path: 'gess-vue/about', component: About },
+    { path: 'gess-vue/contacts', component: Contacts },
+    { path: 'gess-vue/news', component: News,  children: [
         { path: '', component: NewsGrid },
         { path: ':id', component: OneNews }
     ] },
-    { path: '/turbines', component: Turbines },
-    { path: '/solar', component: Solar },
-    { path: '/biomass', component: Biomass },
-    { path: '/financing', component: Financing },
-    { path: '*', redirect: '/' }
+    { path: 'gess-vue/turbines', component: Turbines },
+    { path: 'gess-vue/solar', component: Solar },
+    { path: 'gess-vue/biomass', component: Biomass },
+    { path: 'gess-vue/financing', component: Financing },
+    { path: '*', redirect: 'gess-vue/' }
 ];
