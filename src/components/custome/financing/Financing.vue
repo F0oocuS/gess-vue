@@ -38,7 +38,6 @@
                 },
                 options: {
                     title: 'Financing options',
-                    colorLine: 'colorLine',
                     text: 'We offer various options for financial instruments that can be used for investing in energy projects:',
                     list: [
                         'The use of current (own) assets of client’s enterprise',
@@ -65,7 +64,6 @@
                 },
                 insurance: {
                     title: 'Project insurance',
-                    colorLine: 'colorLine',
                     text: 'GESS has an access to complex insurance for projects that includes the following options:',
                     list: [
                         'Current property insurance on the project site',
@@ -86,7 +84,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .financing-info {
         padding: 50px 40px;
         font-size: 14px;

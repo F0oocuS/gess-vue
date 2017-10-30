@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="options-info">
-                        <app-block-title :blockTitle="options.title" :colorLine="options.colorLine"></app-block-title>
+                        <app-block-title :blockTitle="options.title" :colorLine="true"></app-block-title>
 
                         <p class="options-info__text">{{ options.text }}</p>
 

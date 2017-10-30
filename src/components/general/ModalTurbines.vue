@@ -23,7 +23,7 @@
                             </div>
                             <div class="col-md-7">
                                 <div class="modal-info">
-                                    <app-block-title :blockTitle="title" :colorLine="colorLine"></app-block-title>
+                                    <app-block-title :blockTitle="title" :colorLine="true"></app-block-title>
 
                                     <ul class="modal-info__list">
                                         <li class="modal-info__item"><span>Model: </span>{{ object[turbinesId].model }}</li>

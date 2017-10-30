@@ -1,6 +1,6 @@
 <template>
     <section class="equipment">
-        <app-block-title :blockTitle="equipment.title" :colorLine="equipment.colorLine"></app-block-title>
+        <app-block-title :blockTitle="equipment.title" :colorLine="true"></app-block-title>
         <div class="container">
             <div class="row">
                 <div class="col-md-8">

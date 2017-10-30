@@ -1,6 +1,6 @@
 <template>
     <section class="pyrolysis">
-        <app-block-title :blockTitle="pyrolysis.title" :colorLine="pyrolysis.colorLine"></app-block-title>
+        <app-block-title :blockTitle="pyrolysis.title" :colorLine="true"></app-block-title>
 
         <p class="pyrolysis__info">
             <span>Fast pyrolysis</span> is a process in which organic materials are

@@ -22,7 +22,6 @@
                 },
                 technology: {
                     title: 'Technology',
-                    colorLine: 'colorLine',
                     text: 'Result of American specialist research by order of NASA at the end of XX century:',
                     list: [
                         'Only one moving part of turbine',

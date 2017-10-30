@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-7">
                     <div class="insurance__info">
-                        <app-block-title :blockTitle="insurance.title" :colorLine="insurance.colorLine"></app-block-title>
+                        <app-block-title :blockTitle="insurance.title" :colorLine="true"></app-block-title>
                         <p class="insurance__text">{{ insurance.text }}</p>
                         <div class="insurance__list">
                             <app-unordered-list :list="insurance.list"></app-unordered-list>

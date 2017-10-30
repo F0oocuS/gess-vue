@@ -21,7 +21,6 @@
                 },
                 equipment: {
                     title: 'Reliable equipment - long life time',
-                    colorLine: 'colorLine',
                     list: [
                         'Metering technology to deliver the required amount of substrate',
                         'Efficient digest mixing system and stable production of gas at low energy consumption',
@@ -32,12 +31,10 @@
                     ]
                 },
                 pyrolysis: {
-                    title: 'Fast pyrolysis technology',
-                    colorLine: 'colorLine'
+                    title: 'Fast pyrolysis technology'
                 },
                 pyrolysisPlan: {
                     title: 'Operation of fast pyrolysis plan',
-                    colorLine: 'colorLine',
                     list: [
                         'Sawdust with 30% relative humidity are fed into a dryer operating at a fluidized bed mode (FBD)',
                         'Sawdust with moisture content 2% through the dispenser served in the fast pyrolysis reactor',

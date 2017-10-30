@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="tech-info">
-                        <app-block-title :blockTitle="technology.title" :colorLine="technology.colorLine"></app-block-title>
+                        <app-block-title :blockTitle="technology.title"></app-block-title>
                         <p class="tech-info__text">{{ technology.text }}</p>
                         <ul class="tech-info__list">
                             <li class="tech-info__item" v-for="(item, index) in technology.list"><span>{{ index + 1 }}</span>{{ item }}</li>

@@ -1,26 +1,26 @@
 <template>
     <header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-            <router-link to="/" class="navbar-brand"><img src="../../assets/logoBig.png" alt=""></router-link>
+            <router-link to="/gess-vue" class="navbar-brand"><img src="../../assets/logoBig.png" alt=""></router-link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto ml-auto">
-                    <router-link tag="li" to="/" class="nav-item" exact>
+                    <router-link tag="li" to="/gess-vue" class="nav-item" exact>
                         <a class="nav-link">Main <span class="sr-only">(current)</span></a>
                     </router-link><!--
                     <li class="nav-item">
                         <a class="nav-link" href="#activities">Activities</a>
                     </li>-->
-                    <router-link tag="li" to="/about" class="nav-item">
+                    <router-link tag="li" to="/gess-vue/about" class="nav-item">
                         <a class="nav-link">About us</a>
                     </router-link>
-                    <router-link tag="li" to="/news" class="nav-item">
+                    <router-link tag="li" to="/gess-vue/news" class="nav-item">
                         <a class="nav-link">News</a>
                     </router-link>
-                    <router-link tag="li" to="/contacts" class="nav-item">
+                    <router-link tag="li" to="/gess-vue/contacts" class="nav-item">
                         <a class="nav-link">Contacts</a>
                     </router-link>
                 </ul>

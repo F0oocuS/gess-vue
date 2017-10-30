@@ -18,7 +18,7 @@
                                 <div class="separate"></div>
                                 <p class="article__desc">{{ item.desc }}</p>
                                 <footer class="article__footer">
-                                    <router-link :to="'/news/' + item.id" class="article__read" @click="addId(index)">Continue reading</router-link>
+                                    <router-link :to="'/gess-vue/news/' + item.id" class="article__read" @click="addId(index)">Continue reading</router-link>
                                     <div class="article__date">{{ item.date }}</div>
                                 </footer>
                             </div>

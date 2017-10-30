@@ -1,6 +1,6 @@
 <template>
     <section class="pyrolysis-plan">
-        <app-block-title :blockTitle="pyrolysisPlan.title" :colorLine="pyrolysisPlan.colorLine"></app-block-title>
+        <app-block-title :blockTitle="pyrolysisPlan.title" :colorLine="true"></app-block-title>
         <div class="container">
             <div class="pyrolysis-plan__img">
                 <img src="../../../assets/scheme-image-en.png" alt="Plan image">

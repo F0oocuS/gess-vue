@@ -2,16 +2,16 @@
     <section class="activities" id="activities">
         <div class="container">
             <div class="row">
-                <app-block-title :blockTitle="blockTitle" v-bind:colorLine="colorLine"></app-block-title>
+                <app-block-title :blockTitle="blockTitle" :colorLine="true"></app-block-title>
                 <div class="activities-item" v-for="(item, index) in activities">
-                    <div class="activities-item__body" v-bind:style="{ backgroundImage: 'url(' + item.image + ')'}">
-                        <div class="activities-item__info" v-bind:class="{'activities-item__info_right': item.side}">
+                    <div class="activities-item__body" :style="{ backgroundImage: 'url(/' + item.image + ')'}">
+                        <div class="activities-item__info" :class="{'activities-item__info_right': item.side}">
                             <h4 class="activities-item__title">{{ item.name }}</h4>
                             <div class="activities-item__separate"></div>
                             <div class="activities-item__list">
                                 <app-unordered-list :list="item.list"></app-unordered-list>
                             </div>
-                            <router-link :to="{ path: item.link }" class="activities-item__more">More</router-link>
+                            <router-link :to="{ path: '/gess-vue' + item.link }" class="activities-item__more">More</router-link>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,6 @@
         data() {
             return {
                 blockTitle: 'Activities',
-                colorLine: 'colorLine',
                 activities: [
                     {
                         name: 'Capstone Microturbines',
@@ -118,7 +117,9 @@
                 height: 2px;
                 background-color: #bcc900;
             }
-
+            &__list {
+                color: white;
+            }
             &__more {
                 display: inline-block;
                 margin-top: auto;
